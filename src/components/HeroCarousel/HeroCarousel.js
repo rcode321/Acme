@@ -1,53 +1,135 @@
-import { useState } from "react";
-import { AiOutlineVerticalRight, AiOutlineVerticalLeft } from "react-icons/ai";
-import sampleImage1 from "../../assets/images/sampleImage1.jpg";
-import sampleImage2 from "../../assets/images/sampleImage2.jpg";
-import sampleImage3 from "../../assets/images/sampleImage3.jpg";
-const featuredImages = [sampleImage1, sampleImage2, sampleImage3];
+import sampleImage1 from "../../assets/images/building2.jpg";
+import sampleImage2 from "../../assets/images/building.png";
+import sampleImage3 from "../../assets/images/building3.jpg";
 
-let count = 0;
+import "tw-elements";
 
 const HeroCarousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handleOnNextClick = () => {
-    count = (count + 1) % featuredImages.length;
-    setCurrentIndex(count);
-  };
-
-  const handleOnPrevClick = () => {
-    const productsLength = featuredImages.length;
-    count = (currentIndex + productsLength - 1) % productsLength;
-    setCurrentIndex(count);
-  };
-
-
-  return (
-    <>
-      <div className="max-w-screen-xl m-auto ">
-        <div className="w-full relative select-none">
-          <div className="aspect-w-16 aspect-h-9">
-            <img src={ featuredImages[currentIndex] } alt="" />
-          </div>``
-
-          <div className="absolute w-full top-1/2 transform -translate-y-1/2 flex justify-between items-start px-3">
-            <button onClick={ handleOnPrevClick }>
-              { " " }
-              <AiOutlineVerticalRight size={ 35 } />
-            </button>
-            <button onClick={ handleOnNextClick }>
-              { " " }
-              <AiOutlineVerticalLeft size={ 35 } />
-            </button>
-          </div>
-        </div>
-
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-      </div>
-    </>
-  );
+	return (
+		<div
+			id="carouselExampleCaptions"
+			className="carousel slide relative "
+			data-bs-ride="carousel"
+		>
+			<div className="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mt-">
+				<button
+					type="button"
+					data-bs-target="#carouselExampleCaptions"
+					data-bs-slide-to="0"
+					className="active"
+					aria-current="true"
+					aria-label="Slide 1"
+				></button>
+				<button
+					type="button"
+					data-bs-target="#carouselExampleCaptions"
+					data-bs-slide-to="1"
+					aria-label="Slide 2"
+				></button>
+				<button
+					type="button"
+					data-bs-target="#carouselExampleCaptions"
+					data-bs-slide-to="2"
+					aria-label="Slide 3"
+				></button>
+			</div>
+			<div className="carousel-inner relative w-full overflow-hidden bg-insight ">
+				<div className="carousel-item active relative float-left w-full  ">
+					<div className="flex justify-center flex-col m-6 boxshadow">
+						<div className="mb-5">
+							<h2 className="text-white text-2xl">ACME Insights</h2>
+							<p className="text-white ">
+								How are factors being used around the world?
+							</p>
+						</div>
+						<div className="shadow-lg bg-white max-w-sm p-5">
+							<a href="#!">
+								<img className="rounded-t-lg clippy " src={sampleImage2} alt="" />
+							</a>
+							<div className="p-1">
+								<h5 className="text-green-700 text-2xl font-semibold">
+									Global Factor
+								</h5>
+								<p className="text-green-700 text-2xl mb-4 font-semibold">
+									Investing Study
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div className="carousel-item relative float-left  w-full">
+					<div className="flex justify-center flex-col  m-6 boxshadow">
+						<div className="mb-5">
+							<h2 className="text-white text-2xl">ACME Insights</h2>
+							<p className="text-white">
+								How are factors being used around the world?
+							</p>
+						</div>
+						<div className="shadow-lg bg-white max-w-sm p-5">
+							<a href="#!">
+								<img className="rounded-t-lg clippy" src={sampleImage2} alt="" />
+							</a>
+							<div className="p-1">
+								<h5 className="text-green-700 text-2xl font-semibold ">
+									Global Factor
+								</h5>
+								<p className="text-green-700 font-semibold mb-4 text-2xl">
+									Investing Study
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div className="carousel-item relative float-left w-full">
+					<div className="flex justify-center flex-col m-6 boxshadow">
+						<div className="mb-5">
+							<h2 className="text-white text-2xl">ACME Insights</h2>
+							<p className="text-white">
+								How are factors being used around the world?
+							</p>
+						</div>
+						<div className="shadow-lg bg-white max-w-sm p-5">
+							<a href="#!">
+								<img className="rounded-t-lg clippy" src={sampleImage2} alt="" />
+							</a>
+							<div className="p-1">
+								<h5 className="text-green-700 text-2xl font-semibold">
+									Global Factor
+								</h5>
+								<p className="text-green-700 text-2xl mb-4 font-semibold">
+									Investing Study
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button
+				className="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+				type="button"
+				data-bs-target="#carouselExampleCaptions"
+				data-bs-slide="prev"
+			>
+				<span
+					className="carousel-control-prev-icon inline-block bg-no-repeat"
+					aria-hidden="true"
+				></span>
+				<span className="visually-hidden">Previous</span>
+			</button>
+			<button
+				className="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+				type="button"
+				data-bs-target="#carouselExampleCaptions"
+				data-bs-slide="next"
+			>
+				<span
+					className="carousel-control-next-icon inline-block bg-no-repeat"
+					aria-hidden="true"
+				></span>
+				<span className="visually-hidden">Next</span>
+			</button>
+		</div>
+	);
 };
 
 export default HeroCarousel;

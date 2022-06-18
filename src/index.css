@@ -1,17 +1,47 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+
+/* .fade-anim img {
+	animation: fadeAnim 0.5s ease-out;
+}
+@keyframes fadeAnim {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+} */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+	.clippy {
+		clip-path: polygon(19% 0, 100% 0, 100% 73%, 79% 100%, 0 100%, 0 30%);
+	}
+}
+
+@layer utilities {
+	.boxshadow {
+		-webkit-box-shadow: 1px 8px 6px 0px #008c82;
+		-moz-box-shadow: 0 8px 8px 1px #008c82;
+		box-shadow: -4px 15px 1px -6px #008c82;
+	}
+}
+
+@layer utilities {
+	.bg-insight {
+		background-color: #001a7a;
+	}
+}
