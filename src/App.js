@@ -6,15 +6,15 @@ import NavBar from "./components/Navbar/Navbar";
 import SectionTwo from "./components/SectionTwo/SectionTwo";
 
 function App() {
-	return (
-		<div className="App">
-			<NavBar />
-			<Hero />
-			<HeroCarousel />
-			<CarouselSection />
-			<SectionTwo />
-		</div>
-	);
+  return (
+    <div className="App">
+      <NavBar />
+      <Hero />
+      <HeroCarousel />
+      <CarouselSection />
+      <SectionTwo />
+    </div>
+  );
 }
 
 export default App;
