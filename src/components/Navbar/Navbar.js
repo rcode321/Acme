@@ -37,13 +37,16 @@ export default function Example() {
 									)}
 								</Disclosure.Button>
 							</div>
-							<div className="flex-1 flex items-center justify-normal  sm:justify-between  mx-auto">
-								<div className="flex-shrink-0 flex items-center">
-									<img
-										className="block md:hidden mx-auto w-40"
-										src={Logomobile}
-										alt="Workflow"
-									/>
+							<div className="flex-1 flex items-center  justify-normal  sm:justify-between  ">
+								<div className="flex-shrink-0 flex items-center relative">
+									<div>
+										<img
+											className="block md:hidden mx-auto w-40 mb-4 ml-20 xl:ml-0 lg:ml-0 md:ml-0"
+											src={Logomobile}
+											alt="Workflow"
+										/>
+									</div>
+
 									<div>
 										<img
 											className="hidden md:block h-20 relative z-10 bg-white mb-6"
