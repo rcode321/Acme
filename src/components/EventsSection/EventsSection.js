@@ -4,7 +4,7 @@ import LogoSingle from "../../assets/images/LogoSingle.png";
 import "tw-elements";
 const EventsSection = () => {
 	return (
-		<div className="hidden lg:block">
+		<div className="hidden lg:block max-w-6xl mx-auto">
 			<div className="mx-5 mt-5 mb-16 ">
 				<h1 className=" text-3xl text-blue-900 ">
 					Upcoming <span className="font-bold">Events</span>
@@ -76,7 +76,7 @@ const EventsSection = () => {
 							</div>
 						</div>
 						<div class="carousel-caption -mb-2 md:block absolute text-center">
-							<p className="text-zinc-800 mt-6 pl-52 w-max z-10 ">Chicago, IL</p>
+							<p className="text-zinc-800 mt-6 pl-40 w-max z-10 ">London, England</p>
 						</div>
 					</div>
 				</div>
@@ -109,7 +109,10 @@ const EventsSection = () => {
 							</div>
 						</div>
 						<div class="carousel-caption -mb-2 md:block absolute text-center">
-							<p className="text-zinc-800 mt-6 pl-52 w-max z-10 ">Chicago, IL</p>
+							<p className="text-zinc-800 mt-6 pl-32 w-max z-10 ">
+								{" "}
+								The Wagner, New York
+							</p>
 						</div>
 					</div>
 				</div>
